@@ -1,0 +1,28 @@
+{
+  "name" : "tekkla/core-http",
+  "description" : "Small set of libs for session, header, cookie and post handling.",
+  "require" : {
+    "php" : ">=7.0.0",
+    "tekkla/core-data" : ">=0.0.2",
+    "tekkla/core-toolbox" : ">=0.0.6.2",
+    "psr/log" : "1.0.0"
+  },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ],
+  "license" : "MIT",
+  "keywords" : [ "core", "http", "session", "cookie", "header", "post" ],
+  "autoload" : {
+    "psr-0" : {
+      "Core\\Http" : ""
+    }
+  },
+  "type" : "library",
+  "homepage" : "https://github.com/tekkla/core-http",
+  "authors" : [ {
+    "name" : "Michael Zorn",
+    "email" : "tekkla@tekkla.de",
+    "role" : "Developer"
+  } ]
+}
