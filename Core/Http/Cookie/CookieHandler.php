@@ -5,7 +5,7 @@ namespace Core\Http\Cookie;
  * CookieHandler.php
  *
  * @author Michael "Tekkla" Zorn <tekkla@tekkla.de>
- * @copyright 2016
+ * @copyright 2016-2017
  * @license MIT
  */
 class CookieHandler
@@ -34,7 +34,7 @@ class CookieHandler
      *
      * @return \Core\Http\Cookie\CookieInterface
      */
-    public function &createCookie(string $name)
+    public function &createCookie(string $name): CookieInterface
     {
         $cookie = new Cookie();
         $cookie->setName($name);

@@ -8,7 +8,7 @@ namespace Core\Http\Cookie;
  * @copyright 2016
  * @license MIT
  */
-class Cookie
+class Cookie implements CookieInterface
 {
 
     /**
@@ -61,29 +61,29 @@ class Cookie
     private $httponly = false;
 
     /**
-     * Returns cookie name
      *
-     * @return string
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getName()
      */
-    public function getName():string
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * Returns cookie value
      *
-     * @return the $value
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getValue()
      */
-    public function getValue()
+    public function getValue(): string
     {
         return $this->value;
     }
 
     /**
-     * Returns cookie expire timestamp
      *
-     * @return int
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getExpire()
      */
     public function getExpire(): int
     {
@@ -91,9 +91,9 @@ class Cookie
     }
 
     /**
-     * Returns cookie path
      *
-     * @return string
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getPath()
      */
     public function getPath(): string
     {
@@ -101,9 +101,9 @@ class Cookie
     }
 
     /**
-     * Returns cookie domain
      *
-     * @return string
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getDomain()
      */
     public function getDomain(): string
     {
@@ -111,9 +111,9 @@ class Cookie
     }
 
     /**
-     * Returns cookie secure flag
      *
-     * @return bool
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getSecure()
      */
     public function getSecure(): bool
     {
@@ -121,9 +121,9 @@ class Cookie
     }
 
     /**
-     * Returns cookie httponly flag
      *
-     * @return bool
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::getHttponly()
      */
     public function getHttponly(): bool
     {
@@ -131,9 +131,9 @@ class Cookie
     }
 
     /**
-     * Sets name to be used for cookie
      *
-     * @param string $name
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setName()
      */
     public function setName(string $name)
     {
@@ -141,9 +141,9 @@ class Cookie
     }
 
     /**
-     * Sets cookie value
      *
-     * @param string $value
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setValue()
      */
     public function setValue(string $value)
     {
@@ -151,9 +151,9 @@ class Cookie
     }
 
     /**
-     * Set expire timestamp
      *
-     * @param int $expire
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setExpire()
      */
     public function setExpire(int $expire)
     {
@@ -161,9 +161,9 @@ class Cookie
     }
 
     /**
-     * Sets cookie path
      *
-     * @param string $path
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setPath()
      */
     public function setPath(string $path)
     {
@@ -171,9 +171,9 @@ class Cookie
     }
 
     /**
-     * Set domain
      *
-     * @param string $domain
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setDomain()
      */
     public function setDomain(string $domain)
     {
@@ -181,9 +181,9 @@ class Cookie
     }
 
     /**
-     * Sets secure flag
      *
-     * @param bool $secure
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setSecure()
      */
     public function setSecure(bool $secure)
     {
@@ -191,9 +191,9 @@ class Cookie
     }
 
     /**
-     * Sets httponly flag
      *
-     * @param bool $httponly
+     * {@inheritdoc}
+     * @see \Core\Http\Cookie\CookieInterface::setHttponly()
      */
     public function setHttponly(bool $httponly)
     {

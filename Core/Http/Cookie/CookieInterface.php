@@ -109,4 +109,3 @@ interface CookieInterface
      */
     public function getHttponly(): bool;
 }
-
