@@ -5,7 +5,7 @@ namespace Core\Http\Header\Header;
  * AbstractHeader.php
  *
  * @author Michael "Tekkla" Zorn <tekkla@tekkla.de>
- * @copyright 2016
+ * @copyright 2016-2017
  * @license MIT
  */
 abstract class AbstractHeader implements HeaderInterface
@@ -30,25 +30,23 @@ abstract class AbstractHeader implements HeaderInterface
     protected $http_response_code = null;
 
     /**
-     * (non-PHPdoc)
      *
-     * @see \Core\Http\Header\HeaderInterface::setString()
-     *
+     * {@inheritdoc}
+     * @see \Core\Http\Header\Header\HeaderInterface::setString()
      */
     public function setString(string $string)
     {
         if (empty($string)) {
             Throw new HeaderException('Header string is not allowed to be empty');
         }
-
+        
         $this->string = $string;
     }
 
     /**
-     * (non-PHPdoc)
      *
-     * @see \Core\Http\Header\HeaderInterface::getString()
-     *
+     * {@inheritdoc}
+     * @see \Core\Http\Header\Header\HeaderInterface::getString()
      */
     public function getString(): string
     {
@@ -58,10 +56,9 @@ abstract class AbstractHeader implements HeaderInterface
     }
 
     /**
-     * (non-PHPdoc)
      *
-     * @see \Core\Http\Header\HeaderInterface::setReplace()
-     *
+     * {@inheritdoc}
+     * @see \Core\Http\Header\Header\HeaderInterface::setReplace()
      */
     public function setReplace(bool $replace)
     {
@@ -69,10 +66,9 @@ abstract class AbstractHeader implements HeaderInterface
     }
 
     /**
-     * (non-PHPdoc)
      *
-     * @see \Core\Http\Header\HeaderInterface::getReplace()
-     *
+     * {@inheritdoc}
+     * @see \Core\Http\Header\Header\HeaderInterface::getReplace()
      */
     public function getReplace()
     {
@@ -80,10 +76,9 @@ abstract class AbstractHeader implements HeaderInterface
     }
 
     /**
-     * (non-PHPdoc)
      *
-     * @see \Core\Http\Header\HeaderInterface::setHttpResponseCode()
-     *
+     * {@inheritdoc}
+     * @see \Core\Http\Header\Header\HeaderInterface::setHttpResponseCode()
      */
     public function setHttpResponseCode(int $http_response_code)
     {
@@ -91,10 +86,9 @@ abstract class AbstractHeader implements HeaderInterface
     }
 
     /**
-     * (non-PHPdoc)
      *
-     * @see \Core\Http\Header\HeaderInterface::getHttpResponseCode()
-     *
+     * {@inheritdoc}
+     * @see \Core\Http\Header\Header\HeaderInterface::getHttpResponseCode()
      */
     public function getHttpResponseCode()
     {

@@ -8,7 +8,7 @@ namespace Core\Http\Header\Header;
  * @copyright 2016
  * @license MIT
  */
-class Location extends AbstractHeader implements HeaderInterface
+class Location extends AbstractHeader
 {
 
     /**
@@ -45,7 +45,7 @@ class Location extends AbstractHeader implements HeaderInterface
         if (empty($location)) {
             Throw new HeaderException('Empty location is now allowed.');
         }
-
+        
         $this->location = $location;
     }
 
@@ -82,27 +82,24 @@ class Location extends AbstractHeader implements HeaderInterface
     /**
      *
      * {@inheritdoc}
-     *
-     * @see \Core\Http\Header\AbstractHeader::getString()
+     * @see \Core\Http\Header\Header\AbstractHeader::getString()
      */
     public function getString(): string
     {
         $this->string = 'Location: ' . str_replace(' ', '%20', $this->location);
-
+        
         return $this->string;
     }
 
     /**
      *
      * {@inheritdoc}
-     *
-     * @see \Core\Http\Header\AbstractHeader::getHttpResponseCode()
+     * @see \Core\Http\Header\Header\AbstractHeader::getHttpResponseCode()
      */
     public function getHttpResponseCode(): int
     {
         $this->http_response_code = $this->permanent ? 302 : 301;
-
+        
         return $this->http_response_code;
     }
 }
-

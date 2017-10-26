@@ -8,7 +8,7 @@ namespace Core\Http\Header\Header;
  * @copyright 2016
  * @license MIT
  */
-class ContentType extends AbstractHeader implements HeaderInterface
+class ContentType extends AbstractHeader
 {
 
     /**
@@ -43,7 +43,7 @@ class ContentType extends AbstractHeader implements HeaderInterface
         if (empty($content_type)) {
             Throw new HeaderException('Empty content type is not allowed.');
         }
-
+        
         $this->content_type = $content_type;
     }
 
@@ -64,7 +64,7 @@ class ContentType extends AbstractHeader implements HeaderInterface
         if (empty($charset)) {
             Throw new HeaderException('Empty charset is not allowed.');
         }
-
+        
         $this->charset = $charset;
     }
 
@@ -81,18 +81,16 @@ class ContentType extends AbstractHeader implements HeaderInterface
     /**
      *
      * {@inheritdoc}
-     *
-     * @see \Core\Http\Header\AbstractHeader::getString()
+     * @see \Core\Http\Header\Header\AbstractHeader::getString()
      */
     public function getString(): string
     {
         $this->string = $this->content_type;
-
-        if (!empty($this->charset)) {
+        
+        if (! empty($this->charset)) {
             $this->string .= '; charset=' . $this->charset;
         }
-
+        
         return $this->string;
     }
 }
-
